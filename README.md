@@ -61,9 +61,9 @@ The sector is **moderately fragmented yet top-heavy**: enterprise distribution c
 
 ## 💻 Open-Source GitHub Projects
 
-*Self-hosted directory templates, yellow pages boilerplates, and local business platforms sorted by GitHub Stars (descending).*
+*Self-hosted directory templates, yellow pages boilerplates, and local business platforms sorted by GitHub_Stars (descending).*
 
-| Project 🛠️ | Star Count Badge ⭐ | Description 📌 |
+| Project 🛠️ | Stars_Count Badge ⭐ | Description 📌 |
 |---|---|---|
 | **[Pintree](https://github.com/Pintree-io/pintree)** | [![Stars](https://img.shields.io/github/stars/Pintree-io/pintree?style=social&color=white)](https://github.com/Pintree-io/pintree/stargazers) | **Turn browser bookmarks into a directory website in minutes.** Lightweight and modern directory site generator with responsive layout, instant client-side search, export workflows, and monetization-ready advertising zones. **Best for curated resource directories, link yellow pages, and developer tool hubs.** |
 | **[Cult Directory Template](https://github.com/nolly-studio/cult-directory-template)** | [![Stars](https://img.shields.io/github/stars/nolly-studio/cult-directory-template?style=social&color=white)](https://github.com/nolly-studio/cult-directory-template/stargazers) | **Full-stack directory boilerplate built with Next.js, shadcn/ui, and Supabase.** Features user authentication, tag and category filtering, automated submission flows, customizable color themes, and admin moderation dashboards. **Best for modern directory web apps with user-submitted business or product listings.** |
