@@ -1,6 +1,6 @@
 # Awesome-Directory-Yellow-Pages-Listing
 
-# Top Directory & Yellow Pages Listing Ecosystem
+## Top Directory & Yellow Pages Listing Ecosystem
 
 **Curated List of SaaS Platforms & Open-Source GitHub Projects**  
 *Focused on Local Listings Management, Citation Building & Multi-Location SEO*  
