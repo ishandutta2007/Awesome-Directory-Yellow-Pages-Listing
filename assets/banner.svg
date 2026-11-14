@@ -1,0 +1,202 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e112a" />
+    </linearGradient>
+
+    <linearGradient id="primaryTextGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="45%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.07" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02" />
+    </linearGradient>
+
+    <!-- Glowing Orb Filters -->
+    <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="70" result="blur" />
+    </filter>
+    <filter id="glowAmber" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="80" result="blur" />
+    </filter>
+    <filter id="glowPurple" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="90" result="blur" />
+    </filter>
+
+    <style>
+      @keyframes floatSlow {
+        0%, 100% { transform: translateY(0px) scale(1); }
+        50% { transform: translateY(-12px) scale(1.03); }
+      }
+      @keyframes floatReverse {
+        0%, 100% { transform: translateY(0px) scale(1); }
+        50% { transform: translateY(14px) scale(0.97); }
+      }
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.35; }
+        50% { opacity: 0.65; }
+      }
+      @keyframes orbitCard {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-8px); }
+      }
+      @keyframes dashAnim {
+        to { stroke-dashoffset: -40; }
+      }
+      .orb-cyan {
+        animation: pulseGlow 7s ease-in-out infinite alternate, floatSlow 10s ease-in-out infinite;
+      }
+      .orb-amber {
+        animation: pulseGlow 9s ease-in-out infinite alternate-reverse, floatReverse 12s ease-in-out infinite;
+      }
+      .orb-purple {
+        animation: pulseGlow 8s ease-in-out infinite alternate, floatSlow 11s ease-in-out infinite;
+      }
+      .card-float-1 {
+        animation: orbitCard 6s ease-in-out infinite;
+      }
+      .card-float-2 {
+        animation: orbitCard 7s ease-in-out infinite 1.5s;
+      }
+      .card-float-3 {
+        animation: orbitCard 8s ease-in-out infinite 3s;
+      }
+      .flow-line {
+        stroke-dasharray: 8 6;
+        animation: dashAnim 4s linear infinite;
+      }
+      .title-text {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+      }
+      .body-text {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      }
+    </style>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="420" rx="16" fill="url(#bgGrad)" />
+
+  <!-- Grid Pattern Overlay in Background -->
+  <g opacity="0.08" stroke="#cbd5e1" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="420" />
+    <line x1="200" y1="0" x2="200" y2="420" />
+    <line x1="300" y1="0" x2="300" y2="420" />
+    <line x1="400" y1="0" x2="400" y2="420" />
+    <line x1="500" y1="0" x2="500" y2="420" />
+    <line x1="600" y1="0" x2="600" y2="420" />
+    <line x1="700" y1="0" x2="700" y2="420" />
+    <line x1="800" y1="0" x2="800" y2="420" />
+    <line x1="900" y1="0" x2="900" y2="420" />
+    <line x1="1000" y1="0" x2="1000" y2="420" />
+    <line x1="1100" y1="0" x2="1100" y2="420" />
+    <line x1="0" y1="70" x2="1200" y2="70" />
+    <line x1="0" y1="140" x2="1200" y2="140" />
+    <line x1="0" y1="210" x2="1200" y2="210" />
+    <line x1="0" y1="280" x2="1200" y2="280" />
+    <line x1="0" y1="350" x2="1200" y2="350" />
+  </g>
+
+  <!-- Ambient Glowing Dynamic Orbs (Background Only) -->
+  <circle class="orb-cyan" cx="150" cy="100" r="140" fill="#0ea5e9" filter="url(#glowCyan)" />
+  <circle class="orb-amber" cx="1080" cy="180" r="160" fill="#f59e0b" filter="url(#glowAmber)" />
+  <circle class="orb-purple" cx="620" cy="380" r="150" fill="#8b5cf6" filter="url(#glowPurple)" />
+
+  <!-- Dynamic Network Connection Circuit Lines in Midground (Right Area) -->
+  <g class="flow-line" fill="none" stroke="#38bdf8" stroke-width="2" opacity="0.35">
+    <path d="M 680 130 C 760 130, 780 200, 850 200" />
+    <path d="M 850 200 C 920 200, 950 140, 1020 140" />
+    <path d="M 850 200 C 910 200, 940 280, 1010 280" />
+  </g>
+
+  <!-- Interactive Dynamic Glassmorphism Feature Cards (Right Side Background/Midground) -->
+  <!-- Card 1: Local SEO & Maps -->
+  <g class="card-float-1" transform="translate(850, 70)">
+    <rect width="250" height="74" rx="12" fill="url(#cardGrad)" stroke="#38bdf8" stroke-opacity="0.3" stroke-width="1.5" />
+    <circle cx="36" cy="37" r="18" fill="#0284c7" fill-opacity="0.25" />
+    <text x="36" y="43" text-anchor="middle" font-size="18" fill="#38bdf8">📍</text>
+    <text class="body-text" x="68" y="32" font-size="14" font-weight="700" fill="#f1f5f9">Local Search &amp; Maps</text>
+    <text class="body-text" x="68" y="52" font-size="12" fill="#94a3b8">Google, Apple, Bing Sync</text>
+  </g>
+
+  <!-- Card 2: Citation Syndication -->
+  <g class="card-float-2" transform="translate(880, 170)">
+    <rect width="260" height="74" rx="12" fill="url(#cardGrad)" stroke="#f59e0b" stroke-opacity="0.35" stroke-width="1.5" />
+    <circle cx="36" cy="37" r="18" fill="#d97706" fill-opacity="0.25" />
+    <text x="36" y="43" text-anchor="middle" font-size="18" fill="#fbbf24">⚡</text>
+    <text class="body-text" x="68" y="32" font-size="14" font-weight="700" fill="#f1f5f9">Citation Syndication</text>
+    <text class="body-text" x="68" y="52" font-size="12" fill="#94a3b8">200+ Publisher Networks</text>
+  </g>
+
+  <!-- Card 3: Open-Source Directory Engines -->
+  <g class="card-float-3" transform="translate(830, 270)">
+    <rect width="280" height="74" rx="12" fill="url(#cardGrad)" stroke="#a855f7" stroke-opacity="0.3" stroke-width="1.5" />
+    <circle cx="36" cy="37" r="18" fill="#7c3aed" fill-opacity="0.25" />
+    <text x="36" y="43" text-anchor="middle" font-size="18" fill="#c084fc">🌐</text>
+    <text class="body-text" x="68" y="32" font-size="14" font-weight="700" fill="#f1f5f9">Open-Source Engines</text>
+    <text class="body-text" x="68" y="52" font-size="12" fill="#94a3b8">Self-Hosted Yellow Pages &amp; Portals</text>
+  </g>
+
+  <!-- FOREGROUND: Content Area (100% Unobscured & Crystal Clear) -->
+  <g transform="translate(70, 0)">
+    <!-- Category Pill Badge -->
+    <g transform="translate(0, 60)">
+      <rect width="295" height="32" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.5" />
+      <circle cx="16" cy="16" r="5" fill="#38bdf8" />
+      <text class="body-text" x="30" y="21" font-size="12" font-weight="700" fill="#38bdf8" letter-spacing="1">CURATED TECH DIRECTORY</text>
+    </g>
+
+    <!-- Main Title -->
+    <text class="title-text" x="0" y="150" font-size="44" fill="url(#primaryTextGrad)">
+      Directory &amp; Yellow Pages
+    </text>
+    <text class="title-text" x="0" y="202" font-size="40" fill="#f8fafc">
+      Listing Ecosystem 📖✨
+    </text>
+
+    <!-- Subtitle & Value Proposition -->
+    <text class="body-text" x="0" y="248" font-size="17" fill="#cbd5e1" font-weight="500">
+      Enterprise SaaS Platforms, Multi-Location Local SEO &amp; Open-Source Engines
+    </text>
+    <text class="body-text" x="0" y="278" font-size="14.5" fill="#94a3b8">
+      Citation Management • NAP Synchronization • Reputation Monitoring • Directory Boilerplates
+    </text>
+
+    <!-- Feature Pills in Foreground -->
+    <g transform="translate(0, 318)">
+      <!-- Pill 1 -->
+      <g>
+        <rect width="135" height="34" rx="17" fill="#0f172a" stroke="#334155" stroke-width="1" />
+        <text class="body-text" x="67" y="22" text-anchor="middle" font-size="12.5" font-weight="600" fill="#38bdf8">🏢 Enterprise SaaS</text>
+      </g>
+      <!-- Pill 2 -->
+      <g transform="translate(145, 0)">
+        <rect width="145" height="34" rx="17" fill="#0f172a" stroke="#334155" stroke-width="1" />
+        <text class="body-text" x="72" y="22" text-anchor="middle" font-size="12.5" font-weight="600" fill="#fbbf24">🔓 Open-Source</text>
+      </g>
+      <!-- Pill 3 -->
+      <g transform="translate(300, 0)">
+        <rect width="140" height="34" rx="17" fill="#0f172a" stroke="#334155" stroke-width="1" />
+        <text class="body-text" x="70" y="22" text-anchor="middle" font-size="12.5" font-weight="600" fill="#c084fc">🔍 Local SEO &amp; NAP</text>
+      </g>
+      <!-- Pill 4 -->
+      <g transform="translate(450, 0)">
+        <rect width="135" height="34" rx="17" fill="#0f172a" stroke="#334155" stroke-width="1" />
+        <text class="body-text" x="67" y="22" text-anchor="middle" font-size="12.5" font-weight="600" fill="#34d399">⭐ Star Ranked</text>
+      </g>
+    </g>
+  </g>
+</svg>
